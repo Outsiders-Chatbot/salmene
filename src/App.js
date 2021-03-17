@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import React from "react";
+import { Typography } from 'antd';
+import Icon from '@ant-design/icons';
+import { RobotOutlined } from '@ant-design/icons';
+import Chatbot from './Chatbot/Chatbot';
 import './App.css';
+const { Title } = Typography;
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
+      
+        <Title level={2} ><RobotOutlined  style={{ fontSize: '16px', color: '#08c' }} />&nbsp;Flash-Learning&nbsp;<Icon type="robot" />
+        <RobotOutlined  style={{ fontSize: '16px', color: '#08c' }} /></Title>
+        
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+       
+        <Chatbot />
+
+
+      </div>
     </div>
   );
 }
